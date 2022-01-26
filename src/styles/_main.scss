@@ -40,7 +40,7 @@
         appearance: none;
         -webkit-appearance: none;
         background-color: $primary;
-        width: 70%;
+        min-width: 70%;
         cursor: pointer;
         margin: 0 2rem;
 
@@ -64,6 +64,7 @@
         color: $primary;
         font-size: 1.6rem;
         font-weight: 400;
+        width: 2rem;
     }
 }
 
