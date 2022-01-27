@@ -22,12 +22,12 @@
         <section class="main__content">
             <main class="password__container">
                 <input type="text" name="password__input" id="password-input">
-                <button id="btn-copy" class="btn__copy">Copy</button>
+                <button id="btn-copy" class="btn btn--copy">Copy</button>
             </main>
 
             <div class="slider__container">
                 <p class="slider__name">Length</p>
-                <input id="slider-range" class="slider__range" type="range" name="slider-range" min="1" max="50" value="1" step="1">
+                <input id="slider-range" class="slider__range" type="range" name="slider-range" min="1" max="50" value="16" step="1">
                 <p id="slider-value" class="slider__value">1</p>
             </div>
         </section>
@@ -36,11 +36,13 @@
             <p class="options__title">Options</p>
 
             <div class="options__container">
-                <label class="options__label"><input class="options__checkbox" type="checkbox" name="letters" id="checkbox__letter">Letters (DnK)</label>
-                <label class="options__label"><input class="options__checkbox" type="checkbox" name="digits" id="checkbox__digits">Digits (783)</label>
-                <label class="options__label"><input class="options__checkbox" type="checkbox" name="symbols" id="checkbox__symbols">Symbols (*&$)</label>
-                <label class="options__label"><input class="options__checkbox" type="checkbox" name="uppercase" id="checkbox__uppercase">Uppercase (ASH)</label>
+                <label class="options__label"><input class="options__checkbox" type="checkbox" name="letters" id="checkbox-letter">Letters (DnK)</label>
+                <label class="options__label"><input class="options__checkbox" type="checkbox" name="uppercase" id="checkbox-uppercase">Uppercase (ASH)</label>
+                <label class="options__label"><input class="options__checkbox" type="checkbox" name="digits" id="checkbox-digits">Digits (783)</label>
+                <label class="options__label"><input class="options__checkbox" type="checkbox" name="symbols" id="checkbox-symbols">Symbols (*&$)</label>
             </div>
+
+            <button id="btn-generate" class="btn btn--generate">Generate</button>
         </section>
 
     </div>

@@ -1,13 +1,19 @@
 const sliderRange = document.getElementById('slider-range');
-const sliderValue = document.getElementById('slider-value');
+const sliderValueDisplay = document.getElementById('slider-value');
 
 //Change slider length value using mouse & keyboard
 sliderRange.addEventListener('mousemove', changeValue);
 sliderRange.addEventListener('keydown', changeValue);
 
+let sliderValue = 16;
+
 function changeValue() {
-    sliderValue.innerHTML = sliderRange.value;
+    sliderValue = sliderRange.value;
+    sliderValueDisplay.innerHTML = sliderValue;
+    return sliderValue;
 }
+
+changeValue();
 
 const passwordInput = document.getElementById('password-input');
 const btnCopy = document.getElementById('btn-copy');
@@ -22,4 +28,30 @@ function copyPassword() {
     navigator.clipboard.writeText(copiedPassword);
 
     btnCopy.innerHTML = 'Copied';
+}
+
+const btnGenerate = document.getElementById('btn-generate');
+
+//Generate lowercase letter
+function generateLower() {
+    const lowerCase = 'qwertyuiopasdfghjklzxcvbnm';
+    return lowerCase.charAt(Math.floor(Math.random() * lowerCase.length));
+}
+
+//Generate uppercase letter
+function generateUpper() {
+    const upperCase = 'QWERTYUIOPASDFGHJKLZXCVBNM';
+    return upperCase.charAt(Math.floor(Math.random() * upperCase.length));
+}
+
+//Generate digits
+function generateDigits() {
+    const digits = '1234567890';
+    return Math.floor(Math.random() * digits.length);
+}
+
+//Generate symbol
+function generateSymbols() {
+    const symbols = '!@#$%^&*()';
+    return symbols.charAt(Math.floor(Math.random() * symbols.length));
 }

@@ -69,15 +69,16 @@
 }
 
 .btn{
-    &__copy{
-        color: $primary;
-        width: 7rem;
-        height: 3.5rem;
-        border-radius: 0.5rem;
-        background-color: $red;
-        cursor: pointer;
-        margin-left: 4rem;
+    color: $primary;
+    width: 7rem;
+    height: 3.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
     
+    &--copy{
+        background-color: $red;
+        margin-left: 4rem;
+
         &:hover{
             background-color: $redLight;
         }

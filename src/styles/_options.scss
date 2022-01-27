@@ -1,4 +1,7 @@
 .options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 14rem;
     place-self: center;
 
@@ -29,5 +32,15 @@
         height: 1rem;
         margin-right: 0.8rem;
         cursor: pointer;    
+    }
+}
+
+.btn{
+    &--generate{
+        background-color: $green;
+    
+        &:hover{
+            background-color: $greenLight;
+        }
     }
 }
