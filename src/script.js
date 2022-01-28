@@ -44,7 +44,7 @@ function generateUpper() {
     return upperCase.charAt(Math.floor(Math.random() * upperCase.length));
 }
 
-//Generate digits
+//Generate digit
 function generateDigits() {
     const digits = '1234567890';
     return Math.floor(Math.random() * digits.length);
@@ -54,4 +54,58 @@ function generateDigits() {
 function generateSymbols() {
     const symbols = '!@#$%^&*()';
     return symbols.charAt(Math.floor(Math.random() * symbols.length));
+}
+
+//Generate password after click geenerate button
+btnGenerate.addEventListener('click', generatePassword);
+
+const checkboxLowercase = document.getElementById('checkbox-lowercase');
+const checkboxUppercase = document.getElementById('checkbox-uppercase');
+const checkboxDigits = document.getElementById('checkbox-digits');
+const checkboxSymbols = document.getElementById('checkbox-symbols');
+
+function generatePassword() {
+    btnCopy.innerHTML = 'Copy';
+
+    let generatedCharacters = '';
+
+    function validate() {
+        for (let i = 0; i < sliderValue; i++) {
+            checkboxLowercase.checked
+                ? (generatedCharacters += generateLower())
+                : 0;
+
+            checkboxUppercase.checked
+                ? (generatedCharacters += generateUpper())
+                : 0;
+
+            checkboxDigits.checked
+                ? (generatedCharacters += generateDigits())
+                : 0;
+
+            checkboxSymbols.checked
+                ? (generatedCharacters += generateSymbols())
+                : 0;
+        }
+    }
+
+    validate();
+
+    function moveCharacters() {
+        return generatedCharacters.charAt(
+            Math.floor(Math.random() * generatedCharacters.length)
+        );
+    }
+
+    function getRandomPassword() {
+        let password = '';
+
+        for (let i = 0; i < sliderValue; i++) {
+            password += moveCharacters();
+        }
+
+        passwordInput.value = password;
+    }
+
+    getRandomPassword();
 }
