@@ -1,0 +1,86 @@
+.password__container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#password-input{
+    color: $primary;
+    font-style: 400;
+    font-size: 28px;
+    letter-spacing: 0.1rem;
+    line-height: 2.5rem;
+    width: 60%;
+    outline: none;
+    border-bottom: 4px solid $primary;
+    background: none;
+    padding-left: 0.5rem;
+    margin-left: 10%;
+}
+
+.slider{
+    &__container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        margin: 10%;
+    }
+
+    &__name{
+        color: $primary;
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+
+    &__range{
+        height: 0.3rem;
+        border-radius: 1rem;
+        appearance: none;
+        -webkit-appearance: none;
+        background-color: $primary;
+        min-width: 70%;
+        cursor: pointer;
+        margin: 0 2rem;
+
+        &::-webkit-slider-thumb{
+            -webkit-appearance: none;
+            height: 1.8rem;
+            width: 1.8rem;
+            border-radius: 2rem;
+            background: #ffffff;
+        }
+
+        &::-moz-range-thumb{
+            height: 1.8rem;
+            width: 1.8rem;
+            border-radius: 2rem;
+            background: #ffffff;
+        }
+    }
+
+    &__value{
+        color: $primary;
+        font-size: 1.6rem;
+        font-weight: 400;
+        width: 2rem;
+    }
+}
+
+.btn{
+    color: $primary;
+    width: 7rem;
+    height: 3.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    
+    &--copy{
+        background-color: $red;
+        margin-left: 4rem;
+
+        &:hover{
+            background-color: $redLight;
+        }
+    }
+}
